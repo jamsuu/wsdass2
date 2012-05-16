@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<features>
+
+	<feature ufi="-1603710">
+      <designation>STM</designation>
+      <administrative_division>08</administrative_division>
+      <name_type>N</name_type>
+      <short_name>Tarraji</short_name>
+      <full_name>Tarraji River</full_name>
+      <sort_key>TARRAJIRIVER</sort_key>
+      <modified>1993-12-30</modified>
+    </feature>
+
+    <feature ufi="-1584097">
+      <designation>STM</designation>
+      <administrative_division>08</administrative_division>
+      <name_type>N</name_type>
+      <short_name>Little Tarraji</short_name>
+      <full_name>Little Tarraji River</full_name>
+      <sort_key>LITTLETARRAJIRIVER</sort_key>
+      <modified>1993-12-30</modified>
+    </feature>
+
+    <feature ufi="-1506369">
+      <designation>BGHT</designation>
+      <administrative_division>00</administrative_division>
+      <name_type>N</name_type>
+      <full_name>Great Australian Bight</full_name>
+      <sort_key>GREATAUSTRALIANBIGHT</sort_key>
+      <modified>2007-06-15</modified>
+    </feature>
+
+    <feature ufi="11358720">
+      <designation>PRK</designation>
+      <administrative_division>02</administrative_division>
+      <name_type>N</name_type>
+      <full_name>Seven Little Australians Park</full_name>
+      <sort_key>SEVENLITTLEAUSTRALIANSPARK</sort_key>
+      <modified>2011-12-19</modified>
+    </feature>
+
+    <feature ufi="11371894">
+      <designation>SCHC</designation>
+      <administrative_division>08</administrative_division>
+      <name_type>N</name_type>
+      <full_name>Australian Islamic College</full_name>
+      <sort_key>AUSTRALIANISLAMICCOLLEGE</sort_key>
+      <modified>2011-12-22</modified>
+    </feature>
+
+    <feature ufi="11371895">
+      <designation>SCHC</designation>
+      <administrative_division>08</administrative_division>
+      <name_type>N</name_type>
+      <full_name>Australian Islamic College (North)</full_name>
+      <sort_key>AUSTRALIANISLAMICCOLLEGENORTH</sort_key>
+      <modified>2011-12-22</modified>
+    </feature>
+
+    <feature ufi="11371896">
+      <designation>SCHC</designation>
+      <administrative_division>08</administrative_division>
+      <name_type>N</name_type>
+      <full_name>Australian Islamic College Kewdale</full_name>
+      <sort_key>AUSTRALIANISLAMICCOLLEGEKEWDALE</sort_key>
+      <modified>2011-12-22</modified>
+    </feature>
+
+    <feature ufi="11371839">
+      <designation>SCH</designation>
+      <administrative_division>05</administrative_division>
+      <name_type>N</name_type>
+      <full_name>Australia Plains Primary School</full_name>
+      <sort_key>AUSTRALIAPLAINSPRIMARYSCHOOL</sort_key>
+      <modified>2011-12-22</modified>
+    </feature>
+
+    <feature ufi="-1576456">
+      <designation>PLN</designation>
+      <administrative_division>04</administrative_division>
+      <name_type>V</name_type>
+      <full_name>Great Australian Basin</full_name>
+      <sort_key>GREATAUSTRALIANBASIN</sort_key>
+      <modified>1998-09-24</modified>
+    </feature>
+
+    <feature ufi="-1556567">
+      <designation>ADM1</designation>
+      <administrative_division>01</administrative_division>
+      <name_type>N</name_type>
+      <full_name>Australian Capital Territory</full_name>
+      <sort_key>AUSTRALIANCAPITALTERRITORY</sort_key>
+      <modified>1998-09-24</modified>
+    </feature>
+
+    <feature ufi="11348479">
+      <designation>PRK</designation>
+      <administrative_division>02</administrative_division>
+      <name_type>N</name_type>
+      <full_name>Australia II Park</full_name>
+      <sort_key>AUSTRALIAIIPARK</sort_key>
+      <modified>2011-12-16</modified>
+    </feature>
+
+    <feature ufi="11348912">
+      <designation>RES</designation>
+      <administrative_division>05</administrative_division>
+      <name_type>N</name_type>
+      <full_name>Australia Reserve</full_name>
+      <sort_key>AUSTRALIARESERVE</sort_key>
+      <modified>2011-12-16</modified>
+    </feature>
+
+    <feature ufi="11348785">
+      <designation>RES</designation>
+      <administrative_division>02</administrative_division>
+      <name_type>N</name_type>
+      <full_name>Australia Road Bushland Reserve</full_name>
+      <sort_key>AUSTRALIAROADBUSHLANDRESERVE</sort_key>
+      <modified>2011-12-16</modified>
+    </feature>
+
+    <feature ufi="11353849">
+      <designation>PRK</designation>
+      <administrative_division>05</administrative_division>
+      <name_type>N</name_type>
+      <full_name>Great Australian Bight Marine National Park</full_name>
+      <sort_key>GREATAUSTRALIANBIGHTMARINENATIONALPARK</sort_key>
+      <modified>2011-12-19</modified>
+    </feature>
+
+    <feature ufi="11377801">
+      <designation>SCHC</designation>
+      <administrative_division>05</administrative_division>
+      <name_type>N</name_type>
+      <full_name>Underdale Campus University of South Australia</full_name>
+      <sort_key>UNIVERSITYOFSOUTHAUSTRALIA UNDERDALECAMPUS</sort_key>
+      <modified>2011-12-29</modified>
+    </feature>
+
+    <feature ufi="11377266">
+      <designation>SCHC</designation>
+      <administrative_division>05</administrative_division>
+      <name_type>N</name_type>
+      <full_name>University of South Australia</full_name>
+      <sort_key>UNIVERSITYOFSOUTHAUSTRALIA</sort_key>
+      <modified>2011-12-29</modified>
+    </feature>
+
+    <feature ufi="11377630">
+      <designation>SCH</designation>
+      <administrative_division>05</administrative_division>
+      <name_type>N</name_type>
+      <full_name>South Australian School for Visually Impaired</full_name>
+      <sort_key>SOUTHAUSTRALIANSCHOOLFORVISUALLYIMPAIRED</sort_key>
+      <modified>2011-12-29</modified>
+    </feature>
+
+    <feature ufi="11377337">
+      <designation>SCH</designation>
+      <administrative_division>05</administrative_division>
+      <name_type>N</name_type>
+      <full_name>South Australian Institute of Technology</full_name>
+      <sort_key>SOUTHAUSTRALIANINSTITUTEOFTECHNOLOGY</sort_key>
+      <modified>2011-12-29</modified>
+    </feature>
+
+    <feature ufi="11377715">
+      <designation>SCH</designation>
+      <administrative_division>05</administrative_division>
+      <name_type>N</name_type>
+      <full_name>South Australian Police Academy</full_name>
+      <sort_key>SOUTHAUSTRALIANPOLICEACADEMY</sort_key>
+      <modified>2011-12-29</modified>
+    </feature>
+
+    <feature ufi="-1601186">
+      <designation>ADM1</designation>
+      <administrative_division>05</administrative_division>
+      <name_type>N</name_type>
+      <short_name>South Australia</short_name>
+      <full_name>State of South Australia</full_name>
+      <sort_key>SOUTHAUSTRALIA STATEOF</sort_key>
+      <modified>1998-09-24</modified>
+    </feature>
+
+    <feature ufi="-1608952">
+      <designation>ADM1</designation>
+      <administrative_division>08</administrative_division>
+      <name_type>N</name_type>
+      <short_name>Western Australia</short_name>
+      <full_name>State of Western Australia</full_name>
+      <sort_key>WESTERNAUSTRALIA STATEOF</sort_key>
+      <modified>1998-09-24</modified>
+    </feature>
+
+    <feature ufi="-1577912">
+      <designation>BGHT</designation>
+      <administrative_division>05</administrative_division>
+      <name_type>N</name_type>
+      <short_name>Head of Bight</short_name>
+      <full_name>Head of Great Australian Bight</full_name>
+      <sort_key>HEADOFGREATAUSTRALIANBIGHT</sort_key>
+      <modified>1995-07-21</modified>
+    </feature>
+
+    <feature ufi="-1576481">
+      <designation>DSRT</designation>
+      <administrative_division>08</administrative_division>
+      <name_type>V</name_type>
+      <full_name>Great Australian Desert</full_name>
+      <sort_key>GREATAUSTRALIANDESERT</sort_key>
+      <modified>1998-09-24</modified>
+    </feature>
+
+    <feature ufi="-1576481">
+      <designation>DSRT</designation>
+      <administrative_division>08</administrative_division>
+      <name_type>V</name_type>
+      <full_name>The Great Australian Peneplain</full_name>
+      <sort_key>GREATAUSTRALIANPENEPLAIN THE</sort_key>
+      <modified>1998-09-24</modified>
+    </feature>
+
+    <feature ufi="-1556566">
+      <designation>MTS</designation>
+      <administrative_division>02</administrative_division>
+      <name_type>N</name_type>
+      <full_name>Australian Alps</full_name>
+      <sort_key>AUSTRALIANALPS</sort_key>
+      <modified>1993-12-30</modified>
+    </feature>
+
+    <feature ufi="-1556568">
+      <designation>PPL</designation>
+      <administrative_division>05</administrative_division>
+      <name_type>N</name_type>
+      <full_name>Australia Plains</full_name>
+      <sort_key>AUSTRALIAPLAINS</sort_key>
+      <modified>1993-12-30</modified>
+    </feature>
+
+    <feature ufi="-1556565">
+      <designation>PCLI</designation>
+      <administrative_division>00</administrative_division>
+      <name_type>N</name_type>
+      <short_name>Australia</short_name>
+      <full_name>Commonwealth of Australia</full_name>
+      <sort_key>AUSTRALIA COMMONWEALTHOF</sort_key>
+      <modified>2007-02-28</modified>
+    </feature>
+
+    <feature ufi="11347689">
+      <designation>PRK</designation>
+      <administrative_division>02</administrative_division>
+      <name_type>N</name_type>
+      <full_name>Australia Park</full_name>
+      <sort_key>AUSTRALIAPARK</sort_key>
+      <modified>2011-12-16</modified>
+    </feature>
+
+    <feature ufi="11426631">
+      <designation>RECG</designation>
+      <administrative_division>08</administrative_division>
+      <name_type>N</name_type>
+      <full_name>West Australian Golf Club</full_name>
+      <sort_key>WESTAUSTRALIANGOLFCLUB</sort_key>
+      <modified>2012-02-01</modified>
+    </feature>
+
+    <feature ufi="11393905">
+      <designation>DAM</designation>
+      <administrative_division>05</administrative_division>
+      <name_type>N</name_type>
+      <full_name>White Australia Dam</full_name>
+      <sort_key>WHITEAUSTRALIADAM</sort_key>
+      <modified>2012-01-05</modified>
+    </feature>
+
+    <feature ufi="11456514">
+      <designation>MN</designation>
+      <administrative_division>08</administrative_division>
+      <name_type>N</name_type>
+      <full_name>New Australia</full_name>
+      <sort_key>NEWAUSTRALIA</sort_key>
+      <modified>2012-03-01</modified>
+    </feature>
+
+    <feature ufi="11418061">
+      <designation>LK</designation>
+      <administrative_division>06</administrative_division>
+      <name_type>N</name_type>
+      <full_name>Australia Tarn</full_name>
+      <sort_key>AUSTRALIATARN</sort_key>
+      <modified>2012-01-30</modified>
+    </feature>
+
+</features>
