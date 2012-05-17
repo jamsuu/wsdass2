@@ -10,7 +10,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>WSD Assignment 2 - Lookup Tables</title>
 </head>
-<body bgcolor='#FFBF00'>
+<body bgcolor='FFBF00'>
 <% 
 try {
 		InputStream xsls = application.getResourceAsStream("/Assignment2 Part2/Ass2xsl.xsl");
