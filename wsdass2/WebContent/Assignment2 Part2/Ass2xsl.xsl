@@ -3,11 +3,6 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="/">
-<HTML> 
-<Head>
-<TITLE>Lookup Tables</TITLE>
-</Head>
-<BODY bgcolor='FFBF00'>
 <H1>Lookup Tables</H1>
 <FORM METHOD="POST" ACTION="webpage.jsp">
 <P><i> Administrative Division </i>
@@ -36,8 +31,6 @@
 <input type="submit" value="Submit" />
 </P>
 </FORM>
-</BODY>
-</HTML>
 </xsl:template>
 
 <xsl:template match="name">
