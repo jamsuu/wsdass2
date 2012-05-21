@@ -49,9 +49,6 @@
 			transformer = tfFactory.newTransformer(xsltSource);
 			String primary_sort = request.getParameter("sort_by") == null ? "sort_key" : request.getParameter("sort_by"); 			
 			transformer.setParameter("sort_by", primary_sort);
-			transformer.setParameter("designation", designation);
-			transformer.setParameter("division", division);
-			transformer.setParameter("nametype", nametype);
 		  	transformer.transform(xmlSource, fileResult);
 		} 
 	} catch (Exception e) {
