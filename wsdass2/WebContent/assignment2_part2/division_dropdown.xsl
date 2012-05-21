@@ -2,6 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template match="/lookup">
 		<select name="administrative_division">
+			<option value="">Select a division.. </option>
 			<xsl:apply-templates />
 		</select>
 	</xsl:template>
