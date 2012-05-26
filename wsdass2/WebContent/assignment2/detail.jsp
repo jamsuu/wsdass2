@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html"
-         import="javax.xml.parsers.*,org.w3c.dom.*,java.io.*,javax.xml.transform.*,javax.xml.transform.stream.*,java.util.*" %>
+         import="javax.xml.parsers.*,org.w3c.dom.*,java.io.*,javax.xml.transform.*,javax.xml.transform.stream.*,java.util.*,wsd.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -20,23 +20,14 @@
 			query += division.length() > 0 ? "/administrative_division/" + division : "";
 			query += name.length() > 0 ? "/name/" + name : "";
 			
-			InputStream xsls = application.getResourceAsStream("/assignment2/feature_detail.xsl");
-			StreamSource xmlSource = new StreamSource("http://www-student.it.uts.edu.au/~brookes/gns/features" + query);
-			StreamSource xsltSource = new StreamSource(xsls);
-			StreamResult fileResult = new StreamResult(out);
-			
-			TransformerFactory tfFactory = TransformerFactory.newInstance();
-			Transformer transformer = tfFactory.newTransformer(xsltSource); 			
+			XMLTransformer transformer = new XMLTransformer(application.getResourceAsStream("/assignment2/feature_detail.xsl"), 
+					"http://www-student.it.uts.edu.au/~brookes/gns/features" + query, out);
 			transformer.setParameter("ufi", ufi);
-		  	transformer.transform(xmlSource, fileResult);
+		  	transformer.transform();
 		  	
-		  	xsls = application.getResourceAsStream("/assignment2/location.xsl");
-			xmlSource = new StreamSource("http://www-student.it.uts.edu.au/~brookes/gns/location/" + ufi);
-			xsltSource = new StreamSource(xsls);
-			fileResult = new StreamResult(out);
-			
-			transformer = tfFactory.newTransformer(xsltSource);
-		  	transformer.transform(xmlSource, fileResult);
+		  	transformer = new XMLTransformer(application.getResourceAsStream("/assignment2/location.xsl"),
+		  			"http://www-student.it.uts.edu.au/~brookes/gns/location/" + ufi, out);
+		  	transformer.transform();
 		} 
 	} catch (Exception e) {
 	

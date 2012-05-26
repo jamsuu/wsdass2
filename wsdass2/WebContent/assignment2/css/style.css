@@ -1,3 +1,130 @@
+html, body {padding: 0; margin: 0; border: 0;}
+
 body {
-	background: #e1e1e1;
+	background: #fff;
+	color: #333;
+	font-family: Arial;
+	font-size: 0.8em;
+}
+
+a {
+	color: #4183C4;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.container {
+	margin: 0 auto;
+	width: 960px;
+}
+
+form {
+	padding: 10px;
+	border: 1px solid #ccc;
+	background: #FAFAFA;
+	color: #999;
+	border-radius: 5px;
+	margin: 10px 0 25px 0;
+}
+
+form fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+form input[type="text"],
+form select {
+	color: #666;
+	padding: 3px;
+	border: 1px solid #ccc;
+	margin: 0;
+	margin-right: 8px;
+}
+
+form select {
+	padding: 2px;
+}
+
+form label {
+	color: #666;
+}
+
+table {
+	width: 960px;
+	border-collapse: collapse;
+}
+
+table th {
+	text-align: left;
+	padding: 5px 2px;
+}
+
+table td {
+	border-bottom: 1px solid #ddd;
+	padding: 5px 2px;
+	text-transform: capitalize;
+}
+
+table td:first-child,
+table th:first-child {
+	padding-left: 10px;
+}
+
+table thead {
+	border: 1px solid #ccc;
+	background: #fafafa;
+}
+
+table tbody tr:hover td {
+	background: #fafafa;
+}
+
+.sort_bar {
+	float: right;
+	background: #FAFAFA;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 5px;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+
+.sort_bar ul {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0;
+	margin: 0;
+}
+
+.sort_bar span {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 5px;
+}
+
+.sort_bar li {
+	float: left;
+	border-left: 1px solid #aaa;
+	list-style: none;
+	padding: 0 10px;
+}
+
+.sort_bar li:first-child {
+	border-left: 0;
+}
+
+.sort_bar li a {
+	
+}
+
+.sort_bar li.selected {
+	font-weight: bold;
+}
+
+.paginator {
+	text-align: center;
 }

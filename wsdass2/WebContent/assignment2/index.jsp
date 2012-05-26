@@ -9,44 +9,58 @@
 	<title>WSD Assignment 2 - Lookup Tables</title>
 </head>
 <body>
-	<form method="get">
-	    <%
-	    InputStream xsls = application.getResourceAsStream("/assignment2/designation_dropdown.xsl");
-	    XMLTransformer xmlTransformer = new XMLTransformer(xsls, "http://www-student.it.uts.edu.au/~brookes/gns/lookup/designation", out);
-		xmlTransformer.transform();
-
-		xsls = application.getResourceAsStream("/assignment2/division_dropdown.xsl");
-		xmlTransformer = new XMLTransformer(xsls, "http://www-student.it.uts.edu.au/~brookes/gns/lookup/administrative_division", out);
-		xmlTransformer.transform(); 
-	  	%>
-		<input type="text" name="name" />
-		<input type="submit" />
-	</form>
-    <% if (request.getQueryString() != null) {
+	<div class="container">
+		<%
     	String designation = request.getParameter("designation") == null ? "" : request.getParameter("designation");
 		String division = request.getParameter("administrative_division") == null ? "" : request.getParameter("administrative_division");
-		String nametype = request.getParameter("name") == null ? "" : request.getParameter("name"); 
-		String page_num = request.getParameter("administrative_division") == null ? "" : request.getParameter("administrative_division");
-		String limit = request.getParameter("limit") == null ? "" : request.getParameter("limit");
-			
-		String query = designation.length() > 0 ? "/designation/" + designation : "";
-		query += division.length() > 0 ? "/administrative_division/" + division : "";
-		query += nametype.length() > 0 ? "/name/" + nametype : ""; 	 
-			
-		if (query.length() > 0) {
-			xsls = application.getResourceAsStream("/assignment2/features_table.xsl");
-			xmlTransformer = new XMLTransformer(xsls, "http://www-student.it.uts.edu.au/~brookes/gns/features" + query, out);
-		
-			String primary_sort = request.getParameter("sort_by") == null ? "sort_key" : request.getParameter("sort_by"); 			
-			xmlTransformer.setParameter("sort_by", primary_sort);
-		
-			xmlTransformer.transform();
-		} else { 
+		String name = request.getParameter("name") == null ? "" : request.getParameter("name"); 
+		String page_num = request.getParameter("page") == null ? "0" : request.getParameter("page");
+		String limit = request.getParameter("limit") == null ? "5" : request.getParameter("limit");
 		%>
-			<span>There was an error</span>
-		<%	
-	    }
-	} 
-	%>
+		<form method="get" action="">
+			<fieldset>
+				<label>Name: </label><input type="text" name="name" value="<%= name %>" />
+			    <%
+			    InputStream xsls = application.getResourceAsStream("/assignment2/designation_dropdown.xsl");
+			    XMLTransformer transformer = new XMLTransformer(xsls, "http://www-student.it.uts.edu.au/~brookes/gns/lookup/designation", out);
+				transformer.setParameter("designation", designation);
+				transformer.transform();
+		
+				xsls = application.getResourceAsStream("/assignment2/division_dropdown.xsl");
+				transformer = new XMLTransformer(xsls, "http://www-student.it.uts.edu.au/~brookes/gns/lookup/administrative_division", out);
+				transformer.setParameter("administrative_division", division);
+				transformer.transform(); 
+			  	%>
+				<input type="submit" value="Search" />
+			</fieldset>
+		</form>
+	    <% if (request.getQueryString() != null) {				
+			String query = designation.length() > 0 ? "/designation/" + designation : "";
+			query += division.length() > 0 ? "/administrative_division/" + division : "";
+			query += name.length() > 0 ? "/name/" + name : ""; 	 
+				
+			if (query.length() > 0) {
+				xsls = application.getResourceAsStream("/assignment2/features_table.xsl");
+				transformer = new XMLTransformer(xsls, "http://www-student.it.uts.edu.au/~brookes/gns/features" + query, out);
+			
+				String primary_sort = request.getParameter("sort_by") == null ? "sort_key" : request.getParameter("sort_by"); 			
+				transformer.setParameter("sort_by", primary_sort);
+				transformer.setParameter("administrative_division", division);
+				transformer.setParameter("designation", designation);
+				transformer.setParameter("name", name);
+				transformer.setParameter("page", page_num);
+				transformer.setParameter("limit", limit);
+				
+				transformer.transform();
+			} else { 
+			%>
+				<p style="text-align: center; font-size: 1.1em; border: 1px solid #FB6A6A; border-radius: 5px; background: #FDD5D5; padding: 5px; color: red;">
+					Please provide a name, designation or administrative division to search!
+				</p>
+			<%	
+		    }
+		} 
+		%>
+	</div>
 </body>
 </html>
