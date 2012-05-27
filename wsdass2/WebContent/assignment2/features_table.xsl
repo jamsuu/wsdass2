@@ -8,6 +8,8 @@
 	<xsl:param name="designation" />
 	<xsl:param name="administrative_division" />
 	<xsl:param name="name" />	
+	<xsl:param name="source" />
+	<xsl:param name="destination" />
 	<!-- form the base of the query string -->
 	<xsl:variable name="query">
 		?name=<xsl:value-of select="$name" />
@@ -19,6 +21,7 @@
 		<!-- initialise pagination variables -->
 		<xsl:variable name="count" select="count(feature)"/>
 		<xsl:variable name="selectedRowCount" select="floor(((number($count)-1) div $limit))"/>
+		
 		<div class="sort_bar">
 			<!-- create the sort bar -->
 			<span>Sort By: </span>			
@@ -142,17 +145,23 @@
 	<xsl:template match="feature">
 		<tr>
 			<td>
-				<input type="checkbox" name="source">
+				<input type="radio" name="source">
 					<xsl:attribute name="value">
 						<xsl:value-of select="@ufi" />
 					</xsl:attribute>
+					<xsl:if test="$source = @ufi">
+						<xsl:attribute name="checked" />	
+					</xsl:if>
 				</input>
 			</td>
 			<td>
-				<input type="checkbox" name="destination">
+				<input type="radio" name="destination">
 					<xsl:attribute name="value">
 						<xsl:value-of select="@ufi" />
 					</xsl:attribute>
+					<xsl:if test="$destination = @ufi">
+						<xsl:attribute name="checked" />	
+					</xsl:if>
 				</input>
 			</td>
 			<xsl:apply-templates select="full_name" />

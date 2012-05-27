@@ -1,5 +1,5 @@
 <%@	page language="java"
-         import="javax.xml.parsers.*,org.w3c.dom.*,java.io.*,javax.xml.transform.*,javax.xml.transform.stream.*,java.util.*,wsd.*" %> 
+         import="javax.xml.parsers.*,org.w3c.dom.*,java.io.*,javax.xml.transform.*,javax.xml.transform.stream.*,java.util.*,wsd.*,client.*" %> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -22,6 +22,10 @@
 		String name = request.getParameter("name") == null ? "" : request.getParameter("name"); 
 		String page_num = request.getParameter("page") == null ? "0" : request.getParameter("page");
 		String limit = request.getParameter("limit") == null ? "10" : request.getParameter("limit");
+		
+		// get query strings for getDistance
+		String source = request.getParameter("source") == null ? "" : request.getParameter("source");
+		String destination = request.getParameter("destination") == null ? "" : request.getParameter("destination");
 		%>
 		<form method="get" action="">
 			<fieldset>
@@ -43,6 +47,7 @@
 				  	%>
 					<input type="submit" value="Search" />
 				</div>					
+				
 			    <%
 			    // check if there are any parameters, otherwise do nothing
 			    if (request.getQueryString() != null) {	
@@ -52,7 +57,29 @@
 					query += name.length() > 0 ? "/name/" + name : ""; 	 
 						
 					// if the formed query string isn't empty
-					if (query.length() > 0) {
+					if (query.length() > 0) { %>
+						<div class="distance_bar">
+		    				<input type="submit" value="Get Distance" />
+		    				<%
+		    				// check if the user is requesting getDistance() with proper parameters
+		    				if (source.length() > 0 && destination.length() > 0) { 
+			    				GetDistanceResponseType distanceResponse = 
+			    							DistanceClient.getDistance(source, destination);
+			    				// validate the response
+			    				if (distanceResponse.isValid()) { %>
+									<span class="distance">
+										<strong>Distance: </strong><%= distanceResponse.getDistance() %></span>
+									<span class="bearing">
+										<strong>Bearing: </strong><%= distanceResponse.getBearing() %></span>
+							<% 	} else { %> 
+								<span class="error">There was a problem getting the distance and bearing</span>
+							<% 	
+								}
+			    			} 
+			    			%>
+						</div>	
+					
+						<%	
 						xsls = application.getResourceAsStream("/assignment2/features_table.xsl");
 						transformer = new XMLTransformer(xsls, "http://www-student.it.uts.edu.au/~brookes/gns/features" + query, out);
 					
@@ -62,6 +89,9 @@
 						transformer.setParameter("administrative_division", division);
 						transformer.setParameter("designation", designation);
 						transformer.setParameter("name", name);
+						
+						transformer.setParameter("source", source);
+						transformer.setParameter("destination", destination);
 						
 						//pass in the page parameters to the xsl
 						transformer.setParameter("page", page_num);

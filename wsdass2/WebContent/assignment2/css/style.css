@@ -85,6 +85,28 @@ table tbody tr:hover td {
 	background: #fafafa;
 }
 
+.distance_bar {
+	float: left;
+	background: #FAFAFA;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 1px;
+	-moz-border-radius: 5px;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+
+.distance_bar .distance {
+	padding: 0 4px;
+	padding-right: 8px;
+	border-right: 1px solid #ccc;	
+}
+
+.distance_bar .bearing {
+	padding: 0px 4px;
+	padding-right: 8px;
+}
+
 .sort_bar {
 	float: right;
 	background: #FAFAFA;
@@ -217,3 +239,4 @@ table tbody tr:hover td {
 .right { float: right; }
 .italic { font-style: italic; }
 .capitalize { text-transform: capitalize; }
+.error { color: red; }
